@@ -8,7 +8,7 @@ jobs:
       - name: Find and Replace
       - run: ls -laR ./.github/workflows/
       - id: build
-        uses: ./.github/workflows/build/action.yml
+        uses: ./.action.yml
         with:
           find: "ZBUFFERX"
           replace: "ZTRAFFIC"
