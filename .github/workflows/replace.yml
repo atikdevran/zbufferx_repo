@@ -1,0 +1,14 @@
+name: My Workflow
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Find and Replace
+        uses: atikdevran/zbufferx_repo@v3
+        with:
+          find: "ZBUFFERX"
+          replace: "ZTRAFFIC"
+          include: "atikdevran/zbufferx_repo/**"
+          regex: true
