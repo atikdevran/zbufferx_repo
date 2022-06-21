@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Update action.yml to build locally
         run: |
           sed -i 's/.*image\:.*/  image\: \"Dockerfile\"/' action.yml
@@ -13,10 +13,10 @@ jobs:
         id: selftest
         uses: ./
         with:
-          include: "test/**"
-          find: "world"
-          replace: "there"
+          include: "src/**"
+          find: "ZBUFFERX"
+          replace: "ZTRAFFIC"
       - name: Check outputs and modified files
         run: |
-          test "${{ steps.selftest.outputs.modifiedFiles }}" == "1"
-          grep "Hello there" test/hello.txt
+          src "${{ steps.selftest.outputs.modifiedFiles }}" == "1"
+          
