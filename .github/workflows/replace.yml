@@ -6,6 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Find and Replace
+      - run: ls -laR ./.github/workflows/
+      - id: build
+        uses: ./.github/workflows/build/action.yml
         with:
           find: "ZBUFFERX"
           replace: "ZTRAFFIC"
