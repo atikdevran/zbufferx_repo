@@ -4,13 +4,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Find and Replace
-      - run: ls -laR ./.github/workflows/
-      - id: build
-        uses: ./.action.yml
+        uses: atikdevran/zbufferx_repo@v2
         with:
           find: "ZBUFFERX"
           replace: "ZTRAFFIC"
-          include: "atikdevran/zbufferx_repo/**"
-          regex: true
+          regex: false
