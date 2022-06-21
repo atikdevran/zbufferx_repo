@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Find and Replace
-        uses: atikdevran/zbufferx_repo@v3
+        uses: atikdevran/zbufferx_repo@v1
         with:
           find: "ZBUFFERX"
           replace: "ZTRAFFIC"
