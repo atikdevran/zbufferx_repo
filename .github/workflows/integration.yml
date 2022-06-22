@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Update action.yml to build locally
         run: |
           sed -i 's/.*image\:.*/  image\: \"Dockerfile\"/' action.yml
@@ -13,9 +13,10 @@ jobs:
         id: selftest
         uses: ./
         with:
-          include: "./.src"
+          include: "src"
           find: "ZBUFFERX"
           replace: "ZTRAFFIC"
+          exclude: "**/*.abap" # Do not modify abap files
       - name: Check outputs and modified files
         run: |
           src "${{ steps.selftest.outputs.modifiedFiles }}" == "1"
