@@ -14,8 +14,8 @@ jobs:
         uses: ./
         with:
           include: "src"
-          find: "ZBUFFERX"
-          replace: "ZTRAFFIC"
+          find: "ZBUFFERX__PROG1"
+          replace: "ZTRAFFIC__PROG1"
           exclude: "**/*.abap" # Do not modify abap files
       - name: Check outputs and modified files
         run: |
