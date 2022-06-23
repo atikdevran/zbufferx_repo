@@ -14,10 +14,10 @@ jobs:
         uses: ./
         with:
           include: "src/**"
-          find: "ZBUFFERX_PROG1"
-          replace: "ZTRAFFIC_PROG1"
+          find: "ZBUFFERX"
+          replace: "ZTRAFFIC"
       - name: Check outputs and modified files
         run: |
           test "${{ steps.selftest.outputs.modifiedFiles }}" != "0"
-          grep "ZTRAFFIC_PROG1" src/zbufferx_prog1.prog.xml
+          grep "ZTRAFFIC" src/**
           
