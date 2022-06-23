@@ -1,5 +1,5 @@
 name: Integration Test
-on: [push, pull_request]
+on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,10 +14,10 @@ jobs:
         uses: ./
         with:
           include: "src/**"
-          find: "ZBUFFERX"
-          replace: "ZTRAFFIC"
+          find: "ZTRAFFIC"
+          replace: "ZDEVRAN"
           regex: true
       - name: Check outputs and modified files
         run: |
           test "${{ steps.selftest.outputs.modifiedFiles }}" != "0"
-          grep "ZTRAFFIC" src/**       
+          grep "ZDEVRAN" src/**       
