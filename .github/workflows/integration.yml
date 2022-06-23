@@ -13,7 +13,7 @@ jobs:
         id: selftest
         uses: ./
         with:
-          include: "src/*"
+          include: "src/**"
           find: "ZBUFFERX"
           replace: "ZTRAFFIC"
           regex: true
