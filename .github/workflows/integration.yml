@@ -20,5 +20,5 @@ jobs:
       - name: Check outputs and modified files
         run: |
           test "${{ steps.selftest.outputs.modifiedFiles }}" == "0"
-          grep "ZTRAFFIC" zbufferx__prog1.prog.xml
+          grep "ZTRAFFIC" src/zbufferx__prog1.prog.xml
           
