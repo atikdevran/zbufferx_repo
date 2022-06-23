@@ -13,7 +13,7 @@ jobs:
         id: selftest
         uses: ./
         with:
-          include: "src"
+          include: "src/**"
           find: "ZBUFFERX_PROG1"
           replace: "ZTRAFFIC_PROG1"
       - name: Check outputs and modified files
