@@ -16,6 +16,7 @@ jobs:
           include: "src/**"
           find: "ZBUFFERX"
           replace: "ZTRAFFIC"
+          regex: true
       - name: Check outputs and modified files
         run: |
           test "${{ steps.selftest.outputs.modifiedFiles }}" != "0"
