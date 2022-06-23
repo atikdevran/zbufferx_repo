@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>ZBUFFERX_PROG1</NAME>
+    <NAME>ZTRAFFIC_PROG1</NAME>
     <SUBC>1</SUBC>
     <RLOAD>T</RLOAD>
     <FIXPT>X</FIXPT>
@@ -12,7 +12,7 @@
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Program ZBUFFERX_PROG1</ENTRY>
+     <ENTRY>Program ZTRAFFIC_PROG1</ENTRY>
      <LENGTH>22</LENGTH>
     </item>
    </TPOOL>
