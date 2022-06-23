@@ -19,6 +19,6 @@ jobs:
           exclude: "**/*.abap" # Do not modify abap files
       - name: Check outputs and modified files
         run: |
-          test "${{ steps.selftest.outputs.modifiedFiles }}" == "1"
-          grep "ZTRAFFIC" test/zbufferx__prog1.prog.xml
+          test "${{ steps.selftest.outputs.modifiedFiles }}" == "0"
+          grep "ZTRAFFIC" zbufferx__prog1.prog.xml
           
