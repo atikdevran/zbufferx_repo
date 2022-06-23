@@ -16,7 +16,6 @@ jobs:
           include: "src"
           find: "ZBUFFERX__PROG1"
           replace: "ZTRAFFIC__PROG1"
-          exclude: "**/*.abap" # Do not modify abap files
       - name: Check outputs and modified files
         run: |
           test "${{ steps.selftest.outputs.modifiedFiles }}" != "0"
